@@ -24,9 +24,11 @@ event.preventDefault;
 
    if(id=='name'){
      var naam=event;
+     localStorage.setItem("nameof", naam);
     console.log(event);  }
     else if(id=='password'){
         console.log("password");
+       var  naam=localStorage.getItem("nameof");
         if(event==naam||event.length<4){
             alert("weak password");
         }
